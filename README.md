@@ -6,6 +6,7 @@ In additions to [Hyde](https://github.com/poole/hyde), there are changes includi
 2. Added a docker image with respect to [jekyll offical docker image](https://hub.docker.com/r/jekyll/jekyll/)
 
 **To run hyde**
+
 1. `git clone https://github.com/sandydy/hyde`
 2. `docker-compose up`
 
