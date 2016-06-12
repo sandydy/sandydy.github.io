@@ -1,0 +1,14 @@
+<div class="message">
+  <img class="profile" src="{{ site.avator }}" alt="profile-image">
+  <div class="intro-message">
+	{{ site.intromessage }}      
+  </div>
+  <div>
+  {% if site.twitter_username %}
+  <a class="twitter-follow-button"
+  href="https://twitter.com/{{ site.twitter_username }}">
+	Follow @{{ site.twitter_username }}</a>
+	{% endif %}
+  </div>
+  
+</div>

@@ -1,28 +1,37 @@
 # Dependencies
-gems: [jekyll-paginate, jekyll-gist]
+markdown            : kramdown
+redcarpet:
+  extensions        : ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
+highlighter         : rouge
+gems                : ["jekyll-paginate"]
 
 # Permalinks
 permalink:        pretty
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
+title:            "Sandy's Blog"
+tagline:          'Single Page Application, Docker, Open Source...'
+description:      'Ideas and thoughts'
+url:              http://192.168.99.100:4000
 baseurl:          /
+avator:           /public/1374235_10151775570044965_766769785_n.jpg
+intromessage:     "I am Sandy CHAN, 10+ yr experience front to  back full stack software developer focusing on enterprise software. I am interested in single page application, docker, cloud foundry, cloud related technologies"
+disqusforumshortname:  "sandydy"
+googleanalytics:  "UA-79163484-1"
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+author:           'Sandy CHAN'
+name:           'Sandy CHAN'
 
 paginate:         5
 
 # Custom vars
-version:          2.1.0
+version:          0.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+  repo:           https://github.com/sandydy/sandydy.github.io
+  
+twitter_username    : SandydyChan
+github_username     : sandydy
+facebook_username   : sandydy.chan
+linkedin_username   : sandy-chan-053a70a4
+gitlab_username     : sandydy
