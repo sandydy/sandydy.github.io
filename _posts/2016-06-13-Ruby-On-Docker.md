@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: 2016-06-13 10:42:39.000000000 +00:00
+date: {}
 tags:
   - ruby
   - docker
@@ -101,3 +101,30 @@ If we want to attached to the ruby image `ird`, executes
 In an attached machine, `ctrl+c` won't allow you to detach. It terminates the program. `ctrl+p,ctrl+q` will do the work for you. 
 
 Detach, attach mode enables you to work on one terminal and switch between. The command is handy and easy to be used.
+
+# Docker image
+The other nice feature docker might help... When we execute `docker run` and `--name` switch is not given, there is always a new container created to run docker image from the beginning. 
+
+> That means if no volume mount is given, all the changes in previous container are not maintained. 
+
+This is either good or bad, as we might want to persist the data and resume to work next time. In this case, you might consider to `restart` the container instead of `docker run` again. 
+
+`docker start [container name]`
+
+if `--name` is given, container name follows the name given. Otherwise you may check the docker generated container name via 
+
+`docker ps -a`
+
+Up to a certain point, you can create your own docker image. That means, for instance, you've downloaded ubuntu image, installed nodejs. You can then create a docker image to persist the changes you've made for re-use.
+
+`docker commit -m [commit message] -a [author] [container name] [image name]:[version]`
+for instance
+`docker commit -m "ruby with jekyll_import" -a "Sandy CHAN" r1 ruby_jekyll_import:1`
+
+Next time, we can start a new image from the state commit occurs
+`docker run ruby_jekyll_import:1`
+
+*Note: docker commit creates docker images locally to your host, docker hub downloads images from docker hub. Either ways can serve as initial state of a docker container*
+
+This is particularly useful to build specific re-usable docker images or simply to persist data. 
+`docker images` will show the images which were created or downloaded.
