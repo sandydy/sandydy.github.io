@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: {}
+date: 2016-06-13 10:42:39.000000000 +00:00
 tags:
   - ruby
   - docker
