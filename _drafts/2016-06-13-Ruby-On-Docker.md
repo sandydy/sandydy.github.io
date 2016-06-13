@@ -25,18 +25,18 @@ Ruby image is fetched from docker hub, and I am ready to go... Hm... we missed s
 # Entrypoint
 If we execute `docker run ruby` straight, we are not able to get what we want. If you  look at the docker process `docker ps -a`, you will find that ruby image Exited(0). The reason is because all docker image comes with an entrypoint. An entrypoint is a default command to execute when the image is run. 
 
-![Ruby Image Entrypoint]({{site.baseurl}}/public/2016/06/13/ruby_on_demand/ruby_interactive.jpg)
+![Ruby Image Entrypoint]({{site.baseurl}}/public/images/2016/06/13/ruby_on_demand/ruby_interactive.jpg)
 
 `ird` is interactive ruby. The entrypoint is correct and the docker image is correct. What is missing? By default, docker image runs in daemon mode. However, if we expect inputs, we shall switch to interactive mode with switch (-i) and instructs docker to allocate a presudo-TTY to the container stdin with switch (-t). As a result, the command should be 
 
 `docker run -it ruby`
-![Ruby irb]({{site.baseurl}}/public/2016/06/13/ruby_on_demand/ruby_irb.jpg)
+![Ruby irb]({{site.baseurl}}/public/images/2016/06/13/ruby_on_demand/ruby_irb.jpg)
 
 Here we can execute anything we'd like. We might curious to know why do we exit irb and the docker container exits automatically. Let's run the ruby image with `bash`. 
 *Note: for newbies, docker allows overriding entrypoint at execution. That is we can run `bash` instead of ruby docker image pre-defined `irb` as below*
 
 `docker run -it ruby bash`
-![Entrypoint command pid]({{site.baseurl}}/public/2013/06/13/ruby_on_demand/ruby_pid.jpg)
+![Entrypoint command pid]({{site.baseurl}}/public/images/2016/06/13/ruby_on_demand/ruby_pid.jpg)
 
 As you can see, `bash` is executing with PID=1. That means if `bash` finishes, the linux machine shutdowns. That's why in docker container when entrypoint command exits, the docker container exits. At the same screenshot, we can find that docker image in fact is not a complete function OS, it is a trimmed version only to execute specific process. 
 
@@ -66,7 +66,14 @@ I am lazy and I've prepared a sh script file to run what I want... My command be
 And the ruby program is executed correctly, **Mission Accomplished**. 
 
 # Versions
-While we've run ruby 
+While we've run ruby docker image, we can first navigate to the [docker image page](https://hub.docker.com/_/ruby/). If we have specific ruby application only works on specific version, we could actually specify the version on docker run command.
+
+`docker run -it ruby:2.3.1`
+
+The above command runs ruby 2.3.1. The available version can be found at docker image page on docker hub. 
+
+![Ruby docker image version]({{site.baseurl}}/public/images/2016/06/13/ruby_on_demand/ruby_version.jpg)
+
 
 # Attach and Detach
 
