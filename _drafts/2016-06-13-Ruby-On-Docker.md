@@ -77,4 +77,20 @@ The above command runs ruby 2.3.1. The available version can be found at docker 
 As you can see, various version on different platforms are available. You could just choose the version you'd like to execute the command. *(I regard this feature particularly useful for J2EE as compiler and as runtime.)*
 
 # Attach and Detach
+Sometimes we'd want to start a container, but at the same time yet to connect to the bash or sh. Docker allows such feature as attach and detach which allows host console to attach to the docker in/out.
 
+By default, `docker run` attach to the docker container once the initialization is done. But user can specify docker container to run in detached via switch (-d).
+
+`docker run -itd --name=r1 ruby:2.3.1`
+
+The above command starts a docker ruby version 2.3.1 image in a container named *r1* in detached mode. 
+
+![ruby run detach]({{site.baseurl}}/public/images/2016/06/13/ruby_on_demand/ruby_detach.jpg)
+
+If we want to attached to the ruby image `ird`, executes 
+`docker attach r1`
+![ruby attach]({{site.baseurl}}/public/images/2016/06/13/ruby_on_demand/ruby_attach.jpg)
+
+In an attached machine, `ctrl+c` won't allow you to detach. It terminates the program. `ctrl+p,ctrl+q` will do the work for you. 
+
+Detach, attach mode enables you to work on one terminal and switch between. The command is handy and easy to be used.
