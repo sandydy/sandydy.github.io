@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: 2016-06-13T22:11:39.000Z
+date: {}
 tags:
   - jekyll
   - blog
