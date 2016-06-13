@@ -74,6 +74,7 @@ The above command runs ruby 2.3.1. The available version can be found at docker 
 
 ![Ruby docker image version]({{site.baseurl}}/public/images/2016/06/13/ruby_on_demand/ruby_version.jpg)
 
+As you can see, various version on different platforms are available. You could just choose the version you'd like to execute the command. *(I regard this feature particularly useful for J2EE as compiler and as runtime.)*
 
 # Attach and Detach
 
