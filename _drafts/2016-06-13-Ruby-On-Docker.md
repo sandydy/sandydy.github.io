@@ -1,5 +1,12 @@
 ---
 published: false
+layout: post
+date: 2016-06-13T13:01:39.000Z
+tags:
+  - ruby
+  - docker
+comments: true
+signature: true
 ---
 Last [blog post](http://blog.sandydy.com/2016/06/08/new-experience-docker-on-windows/), we have shown how to host a jekyll web server and update the web page on hosted machine (e.g. Mac or Windows). This article illustrates how to fetch different versions of ruby docker images. 
 
