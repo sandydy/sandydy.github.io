@@ -42,8 +42,31 @@ As you can see, `bash` is executing with PID=1. That means if `bash` finishes, t
 
 The other area to keep an eye on. Docker on ARM for low power device e.g. IoT, you can see people are [porting docker to raspberry pi](http://blog.hypriot.com/post/port_dockerfiles_to_arm/)) The idea would make sense when it comes to router and network device. Many vendors (e.g. synology, mi, cisco) are building apps on their routers. If apps are delivered via docker...)
 
-# Versions
+# Volume
+After we understand how to execute the ruby image. Next is to think of storage. Docker offers flexiblity *volume mount* mechanisms. There are volume driver to mount variuos fs including local fs ext4, to cloud storage AWS EBS, etc.
 
+The simpliest and desktop friendly volume mount must be host mount. That means, docker container mounts to a host directory. As a result, changes can be made both side. (right, the mount offers read/write access). The docker run switch is 
+`-v [hosted path]:[container path]`
+
+Our command becomes
+`docker run -v /home/docker/rubycommand:/rubycommand -it ruby`
+
+I am lazy and I've prepared a sh script file to run what I want... My command becomes
+`docker run -v /home/docker/rubycommand:/rubycommand -it ruby /rubycommand/execute.sh`
+
+    `#!/bin/bash
+    gem install jekyll-import
+    ruby -rubygems -e 'require "jekyll-import";
+    JekyllImport::Importers::Blogger.run({
+    "source"                = "blog-06-12-2016.xml",
+    "no-blogger-info"       = false, # not to leave blogger-URL info (id and old URL) in the front matter
+    "replace-internal-link" = false, # replace internal links using the post_url liquid tag.
+    })'`
+
+And the ruby program is executed correctly, **Mission Accomplished**. 
+
+# Versions
+While we've run ruby 
 
 # Attach and Detach
 
