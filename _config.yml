@@ -13,7 +13,7 @@ title:            "Sandy's Blog"
 tagline:          'Single Page Application, Docker, Open Source...'
 description:      'Ideas and thoughts'
 url:              http://sandydy.github.io
-baseurl:          /
+baseurl:          http://sandydy.github.io
 avator:           /public/1374235_10151775570044965_766769785_n.jpg
 intromessage:     "I am Sandy CHAN, 10+ yr experience front to  back full stack software developer focusing on enterprise software. I am interested in single page application, docker, cloud foundry, cloud related technologies"
 disqusforumshortname:  "sandydy"
