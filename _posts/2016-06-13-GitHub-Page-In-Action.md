@@ -1,7 +1,7 @@
 ---
-published: true
+published: false
 layout: post
-date: 2016-06-13T10:11:39.000Z
+date: {}
 tags:
   - jekyll
   - blog
@@ -30,10 +30,10 @@ What I imagine actually *does not exist*. Instead, a close to reality solution i
 The combination works prefectly fine. It is just close to [ghost](http://ghost.org). I spent good amount of time to explore the possiblity and turns out work fine. `Either you pay for service or you spent time to save pennies` 
 
 The theme I use is [Hyde](https://github.com/sandydy/hyde-on-docker). I made small tweaks on top of [Mark Otto](https://github.com/mdo)'s [original](https://github.com/poole/hyde) 
-![Mark Otto]({{site.baseurl}}/public/images/2016/06/13/BlogCreation/poolehyde.jpg)
+![Mark Otto]({{site.url}}/public/images/2016/06/13/BlogCreation/poolehyde.jpg)
 
 and [Rhadow](https://rhadow.github.io)
-![Rhadow]({{site.baseurl}}/public/images/2016/06/13/BlogCreation/rhadowblog.jpg)
+![Rhadow]({{site.url}}/public/images/2016/06/13/BlogCreation/rhadowblog.jpg)
 **Thanks both of them.**
 
 There are several challenges. First of all, I'd need a starting point. Hyde theme is good, but too simple. Rhadow's theme is good, but too much tailor made. I turn out clone from Rhadow's blog and start from there. In which, my blog already have...
@@ -51,13 +51,13 @@ It turns out a couple of features surprised me
 # Disqus offers commenting feature to remote web page
 [Disqus](https://disqus.com/) offers [embeded scripts](https://disqus.com/features/) to your web page, after I injected to my blog. Users can read blog post in my page and comment to disqus underneath. At the end, my web page doesn't need to have a backend server to handle interactions between.
 
-![disqus.jpg]({{site.baseurl}}/public/images/2016/06/13/BlogCreation/disqus.jpg)
+![disqus.jpg]({{site.url}}/public/images/2016/06/13/BlogCreation/disqus.jpg)
 
 My comments blog post comment are like ...
-![Sandy's Blog - Disqus Comment]({{site.baseurl}}/public/images/2016/06/13/BlogCreation/disquscomment.jpg)
+![Sandy's Blog - Disqus Comment]({{site.url}}/public/images/2016/06/13/BlogCreation/disquscomment.jpg)
 
 The tool also offers comment count as ...
-![Disqus comment count]({{site.baseurl}}/public/images/2016/06/13/BlogCreation/disquscommentcount.jpg)
+![Disqus comment count]({{site.url}}/public/images/2016/06/13/BlogCreation/disquscommentcount.jpg)
 
 # Social apps share buttons
 Most of which provides code snippets for you to easily embeded their share button to your web site. However, the styling is killing. the buttons goes up and down and doesn't align with each other.
@@ -78,7 +78,7 @@ I had registered my domain name (sandydy.com) early the year with [GoDaddy](http
 
 as a result
 [blog.sandydy.com](http://blog.sandydy.com) --> [sandydy.github.io](http://sandydy.github.io)
-![GitHub Page CNAME SubDomain]({{site.baseurl}}/public/images/2016/06/13/BlogCreation/blogsandydycom.jpg)
+![GitHub Page CNAME SubDomain]({{site.url}}/public/images/2016/06/13/BlogCreation/blogsandydycom.jpg)
 
 This could be done just a few simple steps, please refer to this [article](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) for details. Tips: you may find this [article](https://blog.longwin.com.tw/2010/12/windows-clear-dns-cache-2010/) useful to clear your cache to speed up the domain name registration updates.
 
