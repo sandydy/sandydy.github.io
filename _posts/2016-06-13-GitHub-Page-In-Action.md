@@ -1,5 +1,14 @@
 ---
-published: false
+published: true
+layout: post
+date: 2016-06-13T22:11:39.000Z
+tags:
+  - jekyll
+  - blog
+  - disqus
+  - social share buttom
+comments: true
+signature: true
 ---
 The problem statement is still blog related. I managed to set up ghost as my blog with a VPS on cloud. I was, however, feeling uncomfortable with backup, restore, resilence and so on. Obviously those are all **PAID** service. I was later looking at cheap alternatives. I ended up found [GitHub Page](https://pages.github.com/) and [GitLab Page](https://gitlab.com/groups/pages). Both of which supports jekyll and free hosting. Why not? In the meantime, the blog post covers the mirgration paths, custom domain setting, social share buttons setup...
 
