@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: 2016-06-21T10:42:39.000Z
+date: {}
 tags:
   - network
   - docker
@@ -24,7 +24,7 @@ both of which runs with
 `docker run -itd --name=n2 --net=host nginx`
 
 firstly n1 will listen to port 80, n2 listens will fail (you won't know unless you check n2 nginx logs explicitly, it will show cannot bind to port 80)
-![bind_failure.jpg]({{site.baseurl}}/public/images/2016/06/13/docker_network_host/bind_failure.jpg)
+![bind_failure.jpg](/public/images/2016/06/13/docker_network_host/bind_failure.jpg)
 
 however, if we modify the command
 `docker run -itd --name=n1 --net=host --restart=always nginx`
@@ -43,4 +43,3 @@ In that case, network mode "host" work for both g1 and n1 at the same time. Netw
 in the [Jon Langemak](http://www.dasblinkenlichten.com/test/)'s article, the other possible way is to bind different host ethernet. That will also work as the listen will succeed, same as we've done without docker.
 
 in conclusion, network mode **host** enables container to operate host ethernet address same as problem on docker host. However, conflicts might occur. by design, docker host administrator should avoid the conflicts situation.
-
